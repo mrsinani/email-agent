@@ -47,16 +47,13 @@ export default function Home() {
     setResponse(null);
 
     try {
-      const res = await fetch(
-        "https://xhexhi.app.n8n.cloud/webhook-test/lmao",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ message }),
-        }
-      );
+      const res = await fetch("https://xhexhi.app.n8n.cloud/webhook/lmao", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message }),
+      });
 
       const data = await res.json();
 
